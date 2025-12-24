@@ -982,7 +982,7 @@ class Tokenizer:
     and outputs an :class:`~tokenizers.Encoding`.
 
     Args:
-        model (:class:`~tokenizers.models.Model`):
+        model (:class:`~tokenizers_4573.models.Model`):
             The core algorithm that this :obj:`Tokenizer` should be using.
 
     """
@@ -1517,14 +1517,14 @@ class Tokenizer:
     @property
     def model(self):
         """
-        The :class:`~tokenizers.models.Model` in use by the Tokenizer
+        The :class:`~tokenizers_4573.models.Model` in use by the Tokenizer
         """
         pass
 
     @model.setter
     def model(self, value):
         """
-        The :class:`~tokenizers.models.Model` in use by the Tokenizer
+        The :class:`~tokenizers_4573.models.Model` in use by the Tokenizer
         """
         pass
 

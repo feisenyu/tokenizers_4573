@@ -14,7 +14,7 @@ For all the examples listed below, we'll use the same :class:`~tokenizers.Tokeni
     :end-before: END init_tokenizer_trainer
     :dedent: 8
 
-This tokenizer is based on the :class:`~tokenizers.models.Unigram` model. It takes care of
+This tokenizer is based on the :class:`~tokenizers_4573.models.Unigram` model. It takes care of
 normalizing the input using the NFKC Unicode normalization method, and uses a
 :class:`~tokenizers.pre_tokenizers.ByteLevel` pre-tokenizer with the corresponding decoder.
 

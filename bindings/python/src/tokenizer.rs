@@ -465,7 +465,7 @@ type Tokenizer = TokenizerImpl<PyModel, PyNormalizer, PyPreTokenizer, PyPostProc
 /// and outputs an :class:`~tokenizers.Encoding`.
 ///
 /// Args:
-///     model (:class:`~tokenizers.models.Model`):
+///     model (:class:`~tokenizers_4573.models.Model`):
 ///         The core algorithm that this :obj:`Tokenizer` should be using.
 ///
 #[pyclass(dict, module = "tokenizers_4573", name = "Tokenizer")]
@@ -1735,13 +1735,13 @@ impl PyTokenizer {
         .into()
     }
 
-    /// The :class:`~tokenizers.models.Model` in use by the Tokenizer
+    /// The :class:`~tokenizers_4573.models.Model` in use by the Tokenizer
     #[getter]
     fn get_model(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
         self.tokenizer.get_model().get_as_subtype(py)
     }
 
-    /// Set the :class:`~tokenizers.models.Model`
+    /// Set the :class:`~tokenizers_4573.models.Model`
     #[setter]
     fn set_model(&mut self, model: PyRef<PyModel>) {
         self.tokenizer.with_model(model.clone());

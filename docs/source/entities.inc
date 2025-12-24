@@ -39,13 +39,13 @@
     PreTokenizer
         :class:`~tokenizers.pre_tokenizers.PreTokenizer`
     models.BPE
-        :class:`~tokenizers.models.BPE`
+        :class:`~tokenizers_4573.models.BPE`
     models.Unigram
-        :class:`~tokenizers.models.Unigram`
+        :class:`~tokenizers_4573.models.Unigram`
     models.WordLevel
-        :class:`~tokenizers.models.WordLevel`
+        :class:`~tokenizers_4573.models.WordLevel`
     models.WordPiece
-        :class:`~tokenizers.models.WordPiece`
+        :class:`~tokenizers_4573.models.WordPiece`
     Decoder
         :class:`~tokenizers.decoders.Decoder`
 

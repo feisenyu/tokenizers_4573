@@ -49,7 +49,7 @@ Added Tokens
 Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. automodule:: tokenizers.models
+.. automodule:: tokenizers_4573.models
     :members:
 
 Normalizers

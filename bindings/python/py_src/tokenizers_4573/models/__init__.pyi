@@ -24,7 +24,7 @@ class Model:
         Get the associated :class:`~tokenizers.trainers.Trainer`
 
         Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-        :class:`~tokenizers.models.Model`.
+        :class:`~tokenizers_4573.models.Model`.
 
         Returns:
             :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model
@@ -202,7 +202,7 @@ class BPE(Model):
 
         If you don't need to keep the :obj:`vocab, merges` values lying around,
         this method is more optimized than manually calling
-        :meth:`~tokenizers.models.BPE.read_file` to initialize a :class:`~tokenizers.models.BPE`
+        :meth:`~tokenizers_4573.models.BPE.read_file` to initialize a :class:`~tokenizers_4573.models.BPE`
 
         Args:
             vocab (:obj:`str`):
@@ -212,7 +212,7 @@ class BPE(Model):
                 The path to a :obj:`merges.txt` file
 
         Returns:
-            :class:`~tokenizers.models.BPE`: An instance of BPE loaded from these files
+            :class:`~tokenizers_4573.models.BPE`: An instance of BPE loaded from these files
         """
         pass
 
@@ -231,7 +231,7 @@ class BPE(Model):
         Get the associated :class:`~tokenizers.trainers.Trainer`
 
         Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-        :class:`~tokenizers.models.Model`.
+        :class:`~tokenizers_4573.models.Model`.
 
         Returns:
             :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model
@@ -363,7 +363,7 @@ class Unigram(Model):
         Get the associated :class:`~tokenizers.trainers.Trainer`
 
         Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-        :class:`~tokenizers.models.Model`.
+        :class:`~tokenizers_4573.models.Model`.
 
         Returns:
             :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model
@@ -464,15 +464,15 @@ class WordLevel(Model):
             wordlevel = WordLevel(vocab)
 
         If you don't need to keep the :obj:`vocab` values lying around, this method is
-        more optimized than manually calling :meth:`~tokenizers.models.WordLevel.read_file` to
-        initialize a :class:`~tokenizers.models.WordLevel`
+        more optimized than manually calling :meth:`~tokenizers_4573.models.WordLevel.read_file` to
+        initialize a :class:`~tokenizers_4573.models.WordLevel`
 
         Args:
             vocab (:obj:`str`):
                 The path to a :obj:`vocab.json` file
 
         Returns:
-            :class:`~tokenizers.models.WordLevel`: An instance of WordLevel loaded from file
+            :class:`~tokenizers_4573.models.WordLevel`: An instance of WordLevel loaded from file
         """
         pass
 
@@ -481,7 +481,7 @@ class WordLevel(Model):
         Get the associated :class:`~tokenizers.trainers.Trainer`
 
         Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-        :class:`~tokenizers.models.Model`.
+        :class:`~tokenizers_4573.models.Model`.
 
         Returns:
             :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model
@@ -621,15 +621,15 @@ class WordPiece(Model):
             wordpiece = WordPiece(vocab)
 
         If you don't need to keep the :obj:`vocab` values lying around, this method is
-        more optimized than manually calling :meth:`~tokenizers.models.WordPiece.read_file` to
-        initialize a :class:`~tokenizers.models.WordPiece`
+        more optimized than manually calling :meth:`~tokenizers_4573.models.WordPiece.read_file` to
+        initialize a :class:`~tokenizers_4573.models.WordPiece`
 
         Args:
             vocab (:obj:`str`):
                 The path to a :obj:`vocab.txt` file
 
         Returns:
-            :class:`~tokenizers.models.WordPiece`: An instance of WordPiece loaded from file
+            :class:`~tokenizers_4573.models.WordPiece`: An instance of WordPiece loaded from file
         """
         pass
 
@@ -638,7 +638,7 @@ class WordPiece(Model):
         Get the associated :class:`~tokenizers.trainers.Trainer`
 
         Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-        :class:`~tokenizers.models.Model`.
+        :class:`~tokenizers_4573.models.Model`.
 
         Returns:
             :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model

@@ -8,9 +8,9 @@ INDENT = " " * 4
 GENERATED_COMMENT = "# Generated content DO NOT EDIT\n"
 
 OVERRIDES = {
-    ("tokenizers", "AddedToken", "__init__"): "(self, content=None, single_word=False, lstrip=False, rstrip=False, normalized=True, special=False)",
-    ("tokenizers.decoders", "Strip", "__init__"): "(self, content=' ', left=0, right=0)",
-    ("tokenizers.processors", "TemplateProcessing", "__init__"): "(self, single=None, pair=None, special_tokens=None)",
+    ("tokenizers_4573", "AddedToken", "__init__"): "(self, content=None, single_word=False, lstrip=False, rstrip=False, normalized=True, special=False)",
+    ("tokenizers_4573.decoders", "Strip", "__init__"): "(self, content=' ', left=0, right=0)",
+    ("tokenizers_4573.processors", "TemplateProcessing", "__init__"): "(self, single=None, pair=None, special_tokens=None)",
 }
 
 
@@ -184,7 +184,7 @@ def write(module, directory, origin, check=False):
     pyi_content = pyi_file(module)
 
     # Inject extra hints for hand-written Python modules layered on top of the extension.
-    if origin == "tokenizers":
+    if origin == "tokenizers_4573":
         extra = """
 from enum import Enum
 from typing import List, Tuple, Union, Any
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     parser.add_argument("--check", action="store_true")
 
     args = parser.parse_args()
-    import tokenizers
+    import tokenizers_4573
 
     # `tokenizers.tokenizers` is the extension module; attribute access is dynamic.
-    write(tokenizers.tokenizers, "py_src/tokenizers/", "tokenizers", check=args.check)  # type: ignore[attr-defined]
+    write(tokenizers_4573.tokenizers_4573, "py_src/tokenizers_4573/", "tokenizers_4573", check=args.check)  # type: ignore[attr-defined]

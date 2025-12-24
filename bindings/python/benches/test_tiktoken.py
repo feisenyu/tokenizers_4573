@@ -5,7 +5,7 @@ from datasets import load_dataset
 from tiktoken.load import load_tiktoken_bpe  # type: ignore[import]
 import tiktoken  # type: ignore[import]
 from tokenizers_4573 import Tokenizer
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from typing import Tuple, List
 from multiprocessing import Process
 

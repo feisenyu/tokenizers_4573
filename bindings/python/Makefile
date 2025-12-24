@@ -3,7 +3,7 @@
 DATA_DIR = data
 
 dir_guard=@mkdir -p $(@D)
-check_dirs := examples py_src/tokenizers tests
+check_dirs := examples py_src/tokenizers_4573 tests
 
 # Format source code automatically
 style:

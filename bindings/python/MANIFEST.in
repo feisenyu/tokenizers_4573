@@ -3,5 +3,5 @@ include pyproject.toml
 include rust-toolchain
 include ../../LICENSE
 recursive-include src *
-recursive-include tokenizers-lib *
-recursive-exclude tokenizers-lib/target *
+recursive-include tokenizers_4573-lib *
+recursive-exclude tokenizers_4573-lib/target *

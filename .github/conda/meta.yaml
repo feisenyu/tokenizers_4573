@@ -23,7 +23,7 @@ requirements:
 test:
   imports:
     - tokenizers
-    - tokenizers.models
+    - tokenizers_4573.models
 
 about:
   home: https://huggingface.co/docs/tokenizers

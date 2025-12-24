@@ -209,7 +209,7 @@ impl PyModel {
     /// Get the associated :class:`~tokenizers.trainers.Trainer`
     ///
     /// Retrieve the :class:`~tokenizers.trainers.Trainer` associated to this
-    /// :class:`~tokenizers.models.Model`.
+    /// :class:`~tokenizers_4573.models.Model`.
     ///
     /// Returns:
     ///     :class:`~tokenizers.trainers.Trainer`: The Trainer used to train this model
@@ -499,7 +499,7 @@ impl PyBPE {
     ///
     /// If you don't need to keep the :obj:`vocab, merges` values lying around,
     /// this method is more optimized than manually calling
-    /// :meth:`~tokenizers.models.BPE.read_file` to initialize a :class:`~tokenizers.models.BPE`
+    /// :meth:`~tokenizers_4573.models.BPE.read_file` to initialize a :class:`~tokenizers_4573.models.BPE`
     ///
     /// Args:
     ///     vocab (:obj:`str`):
@@ -509,7 +509,7 @@ impl PyBPE {
     ///         The path to a :obj:`merges.txt` file
     ///
     /// Returns:
-    ///     :class:`~tokenizers.models.BPE`: An instance of BPE loaded from these files
+    ///     :class:`~tokenizers_4573.models.BPE`: An instance of BPE loaded from these files
     #[classmethod]
     #[pyo3(signature = (vocab, merges, **kwargs))]
     #[pyo3(text_signature = "(vocab, merges, **kwargs)")]
@@ -705,15 +705,15 @@ impl PyWordPiece {
     ///     wordpiece = WordPiece(vocab)
     ///
     /// If you don't need to keep the :obj:`vocab` values lying around, this method is
-    /// more optimized than manually calling :meth:`~tokenizers.models.WordPiece.read_file` to
-    /// initialize a :class:`~tokenizers.models.WordPiece`
+    /// more optimized than manually calling :meth:`~tokenizers_4573.models.WordPiece.read_file` to
+    /// initialize a :class:`~tokenizers_4573.models.WordPiece`
     ///
     /// Args:
     ///     vocab (:obj:`str`):
     ///         The path to a :obj:`vocab.txt` file
     ///
     /// Returns:
-    ///     :class:`~tokenizers.models.WordPiece`: An instance of WordPiece loaded from file
+    ///     :class:`~tokenizers_4573.models.WordPiece`: An instance of WordPiece loaded from file
     #[classmethod]
     #[pyo3(signature = (vocab, **kwargs))]
     #[pyo3(text_signature = "(vocab, **kwargs)")]
@@ -831,15 +831,15 @@ impl PyWordLevel {
     ///     wordlevel = WordLevel(vocab)
     ///
     /// If you don't need to keep the :obj:`vocab` values lying around, this method is
-    /// more optimized than manually calling :meth:`~tokenizers.models.WordLevel.read_file` to
-    /// initialize a :class:`~tokenizers.models.WordLevel`
+    /// more optimized than manually calling :meth:`~tokenizers_4573.models.WordLevel.read_file` to
+    /// initialize a :class:`~tokenizers_4573.models.WordLevel`
     ///
     /// Args:
     ///     vocab (:obj:`str`):
     ///         The path to a :obj:`vocab.json` file
     ///
     /// Returns:
-    ///     :class:`~tokenizers.models.WordLevel`: An instance of WordLevel loaded from file
+    ///     :class:`~tokenizers_4573.models.WordLevel`: An instance of WordLevel loaded from file
     #[classmethod]
     #[pyo3(signature = (vocab, unk_token = None))]
     #[pyo3(text_signature = "(vocab, unk_token=None)")]
