@@ -4,8 +4,8 @@ import unittest
 
 import tqdm
 from huggingface_hub import hf_hub_download
-from tokenizers import Tokenizer
-from tokenizers.models import BPE, Unigram
+from tokenizers_4573 import Tokenizer
+from tokenizers_4573.models import BPE, Unigram
 
 from .utils import albert_base, data_dir
 

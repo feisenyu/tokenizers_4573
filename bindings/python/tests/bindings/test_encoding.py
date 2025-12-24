@@ -1,6 +1,6 @@
 import pytest
 
-from tokenizers import BertWordPieceTokenizer
+from tokenizers_4573 import BertWordPieceTokenizer
 
 from ..utils import bert_files, data_dir
 

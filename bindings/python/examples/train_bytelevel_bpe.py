@@ -2,7 +2,7 @@ import argparse
 import glob
 from os.path import join
 
-from tokenizers import ByteLevelBPETokenizer
+from tokenizers_4573 import ByteLevelBPETokenizer
 
 
 parser = argparse.ArgumentParser()

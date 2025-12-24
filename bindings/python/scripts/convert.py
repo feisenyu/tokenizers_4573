@@ -1,10 +1,10 @@
 import transformers  # type: ignore[import]
-from tokenizers.implementations import SentencePieceUnigramTokenizer, BaseTokenizer
-from tokenizers.processors import TemplateProcessing
-from tokenizers.models import Unigram, BPE
-from tokenizers import decoders
-from tokenizers import Tokenizer, Regex
-from tokenizers.normalizers import (
+from tokenizers_4573.implementations import SentencePieceUnigramTokenizer, BaseTokenizer
+from tokenizers_4573.processors import TemplateProcessing
+from tokenizers_4573.models import Unigram, BPE
+from tokenizers_4573 import decoders
+from tokenizers_4573 import Tokenizer, Regex
+from tokenizers_4573.normalizers import (
     StripAccents,
     NFKD,
     Lowercase,
@@ -13,7 +13,7 @@ from tokenizers.normalizers import (
     Precompiled,
     Replace,
 )
-from tokenizers.pre_tokenizers import (
+from tokenizers_4573.pre_tokenizers import (
     Digits,
     WhitespaceSplit,
     Metaspace,

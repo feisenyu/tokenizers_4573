@@ -21,7 +21,7 @@ use tk::pre_tokenizers::whitespace::{Whitespace, WhitespaceSplit};
 use tk::pre_tokenizers::PreTokenizerWrapper;
 use tk::tokenizer::Offsets;
 use tk::{PreTokenizedString, PreTokenizer};
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 use super::error::ToPyResult;
 use super::utils::*;
@@ -32,7 +32,7 @@ use super::utils::*;
 /// PreTokenizer will return an instance of this class when instantiated.
 #[pyclass(
     dict,
-    module = "tokenizers.pre_tokenizers",
+    module = "tokenizers_4573.pre_tokenizers",
     name = "PreTokenizer",
     subclass
 )]
@@ -152,12 +152,12 @@ impl PyPreTokenizer {
     /// keep track of the pre-tokenization, and leverage the capabilities of the
     /// :class:`~tokenizers.PreTokenizedString`. If you just want to see the result of
     /// the pre-tokenization of a raw string, you can use
-    /// :meth:`~tokenizers.pre_tokenizers.PreTokenizer.pre_tokenize_str`
+    /// :meth:`~tokenizers_4573.pre_tokenizers.PreTokenizer.pre_tokenize_str`
     ///
     /// Args:
     ///     pretok (:class:`~tokenizers.PreTokenizedString):
     ///         The pre-tokenized string on which to apply this
-    ///         :class:`~tokenizers.pre_tokenizers.PreTokenizer`
+    ///         :class:`~tokenizers_4573.pre_tokenizers.PreTokenizer`
     #[pyo3(text_signature = "(self, pretok)")]
     fn pre_tokenize(&self, pretok: &mut PyPreTokenizedString) -> PyResult<()> {
         ToPyResult(self.pretok.pre_tokenize(&mut pretok.pretok)).into()
@@ -166,10 +166,10 @@ impl PyPreTokenizer {
     /// Pre tokenize the given string
     ///
     /// This method provides a way to visualize the effect of a
-    /// :class:`~tokenizers.pre_tokenizers.PreTokenizer` but it does not keep track of the
+    /// :class:`~tokenizers_4573.pre_tokenizers.PreTokenizer` but it does not keep track of the
     /// alignment, nor does it provide all the capabilities of the
     /// :class:`~tokenizers.PreTokenizedString`. If you need some of these, you can use
-    /// :meth:`~tokenizers.pre_tokenizers.PreTokenizer.pre_tokenize`
+    /// :meth:`~tokenizers_4573.pre_tokenizers.PreTokenizer.pre_tokenize`
     ///
     /// Args:
     ///     sequence (:obj:`str`):
@@ -253,7 +253,7 @@ macro_rules! setter {
 ///     use_regex (:obj:`bool`, `optional`, defaults to :obj:`True`):
 ///         Set this to :obj:`False` to prevent this `pre_tokenizer` from using
 ///         the GPT2 specific regexp for spliting on whitespace.
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "ByteLevel")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "ByteLevel")]
 pub struct PyByteLevel {}
 #[pymethods]
 impl PyByteLevel {
@@ -334,7 +334,7 @@ impl PyByteLevel {
 ///     Use the `Whitespace` function as shown below::
 ///
 ///         ```python
-///         from tokenizers.pre_tokenizers import Whitespace
+///         from tokenizers_4573.pre_tokenizers import Whitespace
 ///
 ///         pre_tokenizer = Whitespace()
 ///         text = "Hello, world! Let's try the Whitespace pre-tokenizer."
@@ -354,7 +354,7 @@ impl PyByteLevel {
 ///          ('tokenizer', (43, 52)),
 ///          ('.', (52, 53))]
 ///         ```
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Whitespace")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Whitespace")]
 pub struct PyWhitespace {}
 #[pymethods]
 impl PyWhitespace {
@@ -366,7 +366,7 @@ impl PyWhitespace {
 }
 
 /// This pre-tokenizer simply splits on the whitespace. Works like `.split()`
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "WhitespaceSplit")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "WhitespaceSplit")]
 pub struct PyWhitespaceSplit {}
 #[pymethods]
 impl PyWhitespaceSplit {
@@ -397,7 +397,7 @@ impl PyWhitespaceSplit {
 ///
 ///     invert (:obj:`bool`, `optional`, defaults to :obj:`False`):
 ///         Whether to invert the pattern.
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Split")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Split")]
 pub struct PySplit {}
 #[pymethods]
 impl PySplit {
@@ -472,7 +472,7 @@ impl PySplit {
 /// Args:
 ///     delimiter: str:
 ///         The delimiter char that will be used to split input
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "CharDelimiterSplit")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "CharDelimiterSplit")]
 pub struct PyCharDelimiterSplit {}
 #[pymethods]
 impl PyCharDelimiterSplit {
@@ -504,7 +504,7 @@ impl PyCharDelimiterSplit {
 ///
 /// This pre-tokenizer splits tokens on spaces, and also on punctuation.
 /// Each occurrence of a punctuation character will be treated separately.
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "BertPreTokenizer")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "BertPreTokenizer")]
 pub struct PyBertPreTokenizer {}
 #[pymethods]
 impl PyBertPreTokenizer {
@@ -522,7 +522,7 @@ impl PyBertPreTokenizer {
 ///         The behavior to use when splitting.
 ///         Choices: "removed", "isolated" (default), "merged_with_previous", "merged_with_next",
 ///         "contiguous"
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Punctuation")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Punctuation")]
 pub struct PyPunctuation {}
 #[pymethods]
 impl PyPunctuation {
@@ -560,7 +560,7 @@ impl PyPunctuation {
 }
 
 /// This pre-tokenizer composes other pre_tokenizers and applies them in sequence
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Sequence")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Sequence")]
 pub struct PySequence {}
 #[pymethods]
 impl PySequence {
@@ -663,7 +663,7 @@ pub(crate) fn from_string(string: String) -> Result<PrependScheme, PyErr> {
 ///         Choices: "always", "never", "first". First means the space is only added on the first
 ///         token (relevant when special tokens are used or other pre_tokenizer are used).
 ///
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Metaspace")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Metaspace")]
 pub struct PyMetaspace {}
 #[pymethods]
 impl PyMetaspace {
@@ -725,7 +725,7 @@ impl PyMetaspace {
 ///         If set to False, digits will grouped as follows::
 ///
 ///             "Call 123 please" -> "Call ", "123", " please"
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "Digits")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "Digits")]
 pub struct PyDigits {}
 #[pymethods]
 impl PyDigits {
@@ -755,7 +755,7 @@ impl PyDigits {
 ///
 ///         Strings are split on the character level rather than the byte level to avoid
 ///         splitting unicode characters consisting of multiple bytes.
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "FixedLength")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "FixedLength")]
 pub struct PyFixedLength {}
 #[pymethods]
 impl PyFixedLength {
@@ -780,7 +780,7 @@ impl PyFixedLength {
 /// It roughly follows https://github.com/google/sentencepiece/blob/master/data/Scripts.txt
 /// Actually Hiragana and Katakana are fused with Han, and 0x30FC is Han too.
 /// This mimicks SentencePiece Unigram implementation.
-#[pyclass(extends=PyPreTokenizer, module = "tokenizers.pre_tokenizers", name = "UnicodeScripts")]
+#[pyclass(extends=PyPreTokenizer, module = "tokenizers_4573.pre_tokenizers", name = "UnicodeScripts")]
 pub struct PyUnicodeScripts {}
 #[pymethods]
 impl PyUnicodeScripts {

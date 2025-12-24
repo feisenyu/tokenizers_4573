@@ -1,5 +1,5 @@
 [project]
-name = "tokenizers"
+name = "tokenizers_4573"
 requires-python = ">=3.9"
 authors = [
   { name = "Nicolas Patry", email = "patry.nicolas@protonmail.com" },
@@ -42,7 +42,7 @@ build-backend = "maturin"
 
 [tool.maturin]
 python-source = "py_src"
-module-name = "tokenizers.tokenizers"
+module-name = "tokenizers_4573.tokenizers_4573"
 bindings = "pyo3"
 features = ["pyo3/extension-module"]
 

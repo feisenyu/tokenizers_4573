@@ -1,8 +1,8 @@
 from typing import Dict, Iterator, List, Optional, Tuple, Union
 
-from tokenizers import AddedToken, Tokenizer, decoders, pre_tokenizers, trainers
-from tokenizers.models import BPE
-from tokenizers.normalizers import NFKC
+from tokenizers_4573 import AddedToken, Tokenizer, decoders, pre_tokenizers, trainers
+from tokenizers_4573.models import BPE
+from tokenizers_4573.normalizers import NFKC
 
 from .base_tokenizer import BaseTokenizer
 

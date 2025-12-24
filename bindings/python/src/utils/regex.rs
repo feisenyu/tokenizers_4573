@@ -3,7 +3,7 @@ use pyo3::prelude::*;
 use tk::utils::SysRegex;
 
 /// Instantiate a new Regex with the given pattern
-#[pyclass(module = "tokenizers", name = "Regex", frozen)]
+#[pyclass(module = "tokenizers_4573", name = "Regex", frozen)]
 pub struct PyRegex {
     pub inner: SysRegex,
     pub pattern: String,

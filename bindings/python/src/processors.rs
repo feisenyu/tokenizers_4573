@@ -19,7 +19,7 @@ use tk::processors::roberta::RobertaProcessing;
 use tk::processors::template::{SpecialToken, Template};
 use tk::processors::PostProcessorWrapper;
 use tk::{Encoding, PostProcessor};
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 /// Base class for all post-processors
 ///
@@ -27,7 +27,7 @@ use tokenizers as tk;
 /// a PostProcessor will return an instance of this class when instantiated.
 #[pyclass(
     dict,
-    module = "tokenizers.processors",
+    module = "tokenizers_4573.processors",
     name = "PostProcessor",
     subclass
 )]
@@ -314,7 +314,7 @@ where
 ///
 ///     cls (:obj:`Tuple[str, int]`):
 ///         A tuple with the string representation of the CLS token, and its id
-#[pyclass(extends=PyPostProcessor, module = "tokenizers.processors", name = "BertProcessing")]
+#[pyclass(extends=PyPostProcessor, module = "tokenizers_4573.processors", name = "BertProcessing")]
 pub struct PyBertProcessing {}
 #[pymethods]
 impl PyBertProcessing {
@@ -387,7 +387,7 @@ impl PyBertProcessing {
 ///     add_prefix_space (:obj:`bool`, `optional`, defaults to :obj:`True`):
 ///         Whether the add_prefix_space option was enabled during pre-tokenization. This
 ///         is relevant because it defines the way the offsets are trimmed out.
-#[pyclass(extends=PyPostProcessor, module = "tokenizers.processors", name = "RobertaProcessing")]
+#[pyclass(extends=PyPostProcessor, module = "tokenizers_4573.processors", name = "RobertaProcessing")]
 pub struct PyRobertaProcessing {}
 #[pymethods]
 impl PyRobertaProcessing {
@@ -477,7 +477,7 @@ impl PyRobertaProcessing {
 ///         If :obj:`True`, keeps the first token's offset as is. If :obj:`False`, increments
 ///         the start of the first token's offset by 1. Only has an effect if :obj:`trim_offsets`
 ///         is set to :obj:`True`.
-#[pyclass(extends=PyPostProcessor, module = "tokenizers.processors", name = "ByteLevel")]
+#[pyclass(extends=PyPostProcessor, module = "tokenizers_4573.processors", name = "ByteLevel")]
 pub struct PyByteLevel {}
 #[pymethods]
 impl PyByteLevel {
@@ -671,7 +671,7 @@ impl FromPyObject<'_> for PyTemplate {
 ///
 ///          The given dict expects the provided :obj:`ids` and :obj:`tokens` lists to have
 ///          the same length.
-#[pyclass(extends=PyPostProcessor, module = "tokenizers.processors", name = "TemplateProcessing")]
+#[pyclass(extends=PyPostProcessor, module = "tokenizers_4573.processors", name = "TemplateProcessing")]
 pub struct PyTemplateProcessing {}
 #[pymethods]
 impl PyTemplateProcessing {
@@ -728,7 +728,7 @@ impl PyTemplateProcessing {
 /// Args:
 ///     processors (:obj:`List[PostProcessor]`)
 ///         The processors that need to be chained
-#[pyclass(extends=PyPostProcessor, module = "tokenizers.processors", name = "Sequence")]
+#[pyclass(extends=PyPostProcessor, module = "tokenizers_4573.processors", name = "Sequence")]
 pub struct PySequence {}
 
 #[pymethods]

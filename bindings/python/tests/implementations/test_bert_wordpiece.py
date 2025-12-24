@@ -1,4 +1,4 @@
-from tokenizers import BertWordPieceTokenizer
+from tokenizers_4573 import BertWordPieceTokenizer
 
 from ..utils import bert_files, data_dir, multiprocessing_with_parallelism
 

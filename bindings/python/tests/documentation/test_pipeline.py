@@ -1,4 +1,4 @@
-from tokenizers import Tokenizer
+from tokenizers_4573 import Tokenizer
 
 from ..utils import data_dir, doc_pipeline_bert_tokenizer, doc_wiki_tokenizer
 
@@ -15,7 +15,7 @@ class TestPipeline:
     def test_pipeline(self, doc_wiki_tokenizer):
         try:
             # START reload_tokenizer
-            from tokenizers import Tokenizer
+            from tokenizers_4573 import Tokenizer
 
             tokenizer = Tokenizer.from_file("data/tokenizer-wiki.json")
             # END reload_tokenizer
@@ -23,8 +23,8 @@ class TestPipeline:
             tokenizer = Tokenizer.from_file(doc_wiki_tokenizer)
 
         # START setup_normalizer
-        from tokenizers import normalizers
-        from tokenizers.normalizers import NFD, StripAccents
+        from tokenizers_4573 import normalizers
+        from tokenizers_4573.normalizers import NFD, StripAccents
 
         normalizer = normalizers.Sequence([NFD(), StripAccents()])
         # END setup_normalizer
@@ -37,7 +37,7 @@ class TestPipeline:
         tokenizer.normalizer = normalizer
         # END replace_normalizer
         # START setup_pre_tokenizer
-        from tokenizers.pre_tokenizers import Whitespace
+        from tokenizers_4573.pre_tokenizers import Whitespace
 
         pre_tokenizer = Whitespace()
         pre_tokenizer.pre_tokenize_str("Hello! How are you? I'm fine, thank you.")
@@ -62,8 +62,8 @@ class TestPipeline:
             (".", (39, 40)),
         ]
         # START combine_pre_tokenizer
-        from tokenizers import pre_tokenizers
-        from tokenizers.pre_tokenizers import Digits
+        from tokenizers_4573 import pre_tokenizers
+        from tokenizers_4573.pre_tokenizers import Digits
 
         pre_tokenizer = pre_tokenizers.Sequence([Whitespace(), Digits(individual_digits=True)])
         pre_tokenizer.pre_tokenize_str("Call 911!")
@@ -80,7 +80,7 @@ class TestPipeline:
         tokenizer.pre_tokenizer = pre_tokenizer
         # END replace_pre_tokenizer
         # START setup_processor
-        from tokenizers.processors import TemplateProcessing
+        from tokenizers_4573.processors import TemplateProcessing
 
         tokenizer.post_processor = TemplateProcessing(
             single="[CLS] $A [SEP]",
@@ -105,24 +105,24 @@ class TestPipeline:
     @staticmethod
     def slow_train():
         # START bert_setup_tokenizer
-        from tokenizers import Tokenizer
-        from tokenizers.models import WordPiece
+        from tokenizers_4573 import Tokenizer
+        from tokenizers_4573.models import WordPiece
 
         bert_tokenizer = Tokenizer(WordPiece(unk_token="[UNK]"))
         # END bert_setup_tokenizer
         # START bert_setup_normalizer
-        from tokenizers import normalizers
-        from tokenizers.normalizers import NFD, Lowercase, StripAccents
+        from tokenizers_4573 import normalizers
+        from tokenizers_4573.normalizers import NFD, Lowercase, StripAccents
 
         bert_tokenizer.normalizer = normalizers.Sequence([NFD(), Lowercase(), StripAccents()])
         # END bert_setup_normalizer
         # START bert_setup_pre_tokenizer
-        from tokenizers.pre_tokenizers import Whitespace
+        from tokenizers_4573.pre_tokenizers import Whitespace
 
         bert_tokenizer.pre_tokenizer = Whitespace()
         # END bert_setup_pre_tokenizer
         # START bert_setup_processor
-        from tokenizers.processors import TemplateProcessing
+        from tokenizers_4573.processors import TemplateProcessing
 
         bert_tokenizer.post_processor = TemplateProcessing(
             single="[CLS] $A [SEP]",
@@ -134,7 +134,7 @@ class TestPipeline:
         )
         # END bert_setup_processor
         # START bert_train_tokenizer
-        from tokenizers.trainers import WordPieceTrainer
+        from tokenizers_4573.trainers import WordPieceTrainer
 
         trainer = WordPieceTrainer(vocab_size=30522, special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
         files = [f"data/wikitext-103-raw/wiki.{split}.raw" for split in ["test", "train", "valid"]]
@@ -159,7 +159,7 @@ class TestPipeline:
         # END bert_test_decoding
         assert bert_tokenizer.decode(output.ids) == "welcome to the tok ##eni ##zer ##s library ."
         # START bert_proper_decoding
-        from tokenizers import decoders
+        from tokenizers_4573 import decoders
 
         bert_tokenizer.decoder = decoders.WordPiece()
         bert_tokenizer.decode(output.ids)

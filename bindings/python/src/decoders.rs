@@ -20,7 +20,7 @@ use tk::decoders::wordpiece::WordPiece;
 use tk::decoders::DecoderWrapper;
 use tk::normalizers::replace::Replace;
 use tk::Decoder;
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 use super::error::ToPyResult;
 
@@ -28,7 +28,7 @@ use super::error::ToPyResult;
 ///
 /// This class is not supposed to be instantiated directly. Instead, any implementation of
 /// a Decoder will return an instance of this class when instantiated.
-#[pyclass(dict, module = "tokenizers.decoders", name = "Decoder", subclass)]
+#[pyclass(dict, module = "tokenizers_4573.decoders", name = "Decoder", subclass)]
 #[derive(Clone, Deserialize, Serialize)]
 #[serde(transparent)]
 pub struct PyDecoder {
@@ -164,7 +164,7 @@ macro_rules! setter {
 ///
 /// This decoder is to be used in tandem with the :class:`~tokenizers.pre_tokenizers.ByteLevel`
 /// :class:`~tokenizers.pre_tokenizers.PreTokenizer`.
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "ByteLevel")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "ByteLevel")]
 pub struct PyByteLevelDec {}
 #[pymethods]
 impl PyByteLevelDec {
@@ -179,7 +179,7 @@ impl PyByteLevelDec {
 ///
 /// This decoder is to be used in tandem with the :class:`~tokenizers.pre_tokenizers.Replace`
 /// :class:`~tokenizers.pre_tokenizers.PreTokenizer`.
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "Replace")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "Replace")]
 pub struct PyReplaceDec {}
 #[pymethods]
 impl PyReplaceDec {
@@ -202,7 +202,7 @@ impl PyReplaceDec {
 ///     cleanup (:obj:`bool`, `optional`, defaults to :obj:`True`):
 ///         Whether to cleanup some tokenization artifacts. Mainly spaces before punctuation,
 ///         and some abbreviated english forms.
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "WordPiece")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "WordPiece")]
 pub struct PyWordPieceDec {}
 #[pymethods]
 impl PyWordPieceDec {
@@ -238,7 +238,7 @@ impl PyWordPieceDec {
 /// to pure bytes, and attempts to make them into a string. If the tokens
 /// cannot be decoded you will get � instead for each inconvertible byte token
 ///
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "ByteFallback")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "ByteFallback")]
 pub struct PyByteFallbackDec {}
 #[pymethods]
 impl PyByteFallbackDec {
@@ -253,7 +253,7 @@ impl PyByteFallbackDec {
 /// Fuse simply fuses every token into a single string.
 /// This is the last step of decoding, this decoder exists only if
 /// there is need to add other decoders *after* the fusion
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "Fuse")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "Fuse")]
 pub struct PyFuseDec {}
 #[pymethods]
 impl PyFuseDec {
@@ -266,7 +266,7 @@ impl PyFuseDec {
 
 /// Strip normalizer
 /// Strips n left characters of each token, or n right characters of each token
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "Strip")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "Strip")]
 pub struct PyStrip {}
 #[pymethods]
 impl PyStrip {
@@ -322,7 +322,7 @@ impl PyStrip {
 ///         lets us treat `hello` exactly like `say hello`.
 ///         Choices: "always", "never", "first". First means the space is only added on the first
 ///         token (relevant when special tokens are used or other pre_tokenizer are used).
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "Metaspace")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "Metaspace")]
 pub struct PyMetaspaceDec {}
 #[pymethods]
 impl PyMetaspaceDec {
@@ -382,7 +382,7 @@ impl PyMetaspaceDec {
 ///     suffix (:obj:`str`, `optional`, defaults to :obj:`</w>`):
 ///         The suffix that was used to characterize an end-of-word. This suffix will
 ///         be replaced by whitespaces during the decoding
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "BPEDecoder")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "BPEDecoder")]
 pub struct PyBPEDecoder {}
 #[pymethods]
 impl PyBPEDecoder {
@@ -413,7 +413,7 @@ impl PyBPEDecoder {
 ///     cleanup (:obj:`bool`, `optional`, defaults to :obj:`True`):
 ///         Whether to cleanup some tokenization artifacts.
 ///         Mainly spaces before punctuation, and some abbreviated english forms.
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name = "CTC")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name = "CTC")]
 pub struct PyCTCDecoder {}
 #[pymethods]
 impl PyCTCDecoder {
@@ -467,7 +467,7 @@ impl PyCTCDecoder {
 /// Args:
 ///     decoders (:obj:`List[Decoder]`)
 ///         The decoders that need to be chained
-#[pyclass(extends=PyDecoder, module = "tokenizers.decoders", name="Sequence")]
+#[pyclass(extends=PyDecoder, module = "tokenizers_4573.decoders", name="Sequence")]
 pub struct PySequenceDecoder {}
 #[pymethods]
 impl PySequenceDecoder {
@@ -599,7 +599,7 @@ pub fn decoders(m: &Bound<'_, PyModule>) -> PyResult<()> {
 
 /// Class needed for streaming decode
 ///
-#[pyclass(module = "tokenizers.decoders", name = "DecodeStream")]
+#[pyclass(module = "tokenizers_4573.decoders", name = "DecodeStream")]
 #[derive(Clone)]
 pub struct PyDecodeStream {
     /// Regular decode option that is kept throughout.

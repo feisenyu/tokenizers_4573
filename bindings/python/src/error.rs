@@ -3,7 +3,7 @@ use pyo3::prelude::*;
 use pyo3::type_object::PyTypeInfo;
 use std::ffi::CString;
 use std::fmt::{Display, Formatter, Result as FmtResult};
-use tokenizers::tokenizer::Result;
+use tokenizers_4573::tokenizer::Result;
 
 #[derive(Debug)]
 pub struct PyError(pub String);

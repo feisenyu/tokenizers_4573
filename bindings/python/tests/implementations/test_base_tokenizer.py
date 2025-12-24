@@ -1,5 +1,5 @@
-from tokenizers import Tokenizer, decoders, models, normalizers, pre_tokenizers, processors
-from tokenizers.implementations import BaseTokenizer
+from tokenizers_4573 import Tokenizer, decoders, models, normalizers, pre_tokenizers, processors
+from tokenizers_4573.implementations import BaseTokenizer
 
 
 class TestBaseTokenizer:

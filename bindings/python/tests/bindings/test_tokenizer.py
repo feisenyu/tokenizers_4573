@@ -3,13 +3,13 @@ import concurrent.futures
 import pytest
 import numpy as np
 import asyncio
-from tokenizers import AddedToken, Encoding, Tokenizer
-from tokenizers.implementations import BertWordPieceTokenizer
-from tokenizers.models import BPE, Model, Unigram
-from tokenizers.pre_tokenizers import ByteLevel, Metaspace
-from tokenizers.processors import RobertaProcessing, TemplateProcessing
-from tokenizers.normalizers import Strip, Lowercase, Sequence
-from tokenizers.decoders import ByteFallback, DecodeStream, Metaspace as DecoderMetaspace
+from tokenizers_4573 import AddedToken, Encoding, Tokenizer
+from tokenizers_4573.implementations import BertWordPieceTokenizer
+from tokenizers_4573.models import BPE, Model, Unigram
+from tokenizers_4573.pre_tokenizers import ByteLevel, Metaspace
+from tokenizers_4573.processors import RobertaProcessing, TemplateProcessing
+from tokenizers_4573.normalizers import Strip, Lowercase, Sequence
+from tokenizers_4573.decoders import ByteFallback, DecodeStream, Metaspace as DecoderMetaspace
 import time
 
 from ..utils import bert_files, data_dir, multiprocessing_with_parallelism, roberta_files

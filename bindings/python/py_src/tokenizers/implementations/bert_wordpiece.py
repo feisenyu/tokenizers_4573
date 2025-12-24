@@ -1,10 +1,10 @@
 from typing import Dict, Iterator, List, Optional, Union
 
-from tokenizers import AddedToken, Tokenizer, decoders, trainers
-from tokenizers.models import WordPiece
-from tokenizers.normalizers import BertNormalizer
-from tokenizers.pre_tokenizers import BertPreTokenizer
-from tokenizers.processors import BertProcessing
+from tokenizers_4573 import AddedToken, Tokenizer, decoders, trainers
+from tokenizers_4573.models import WordPiece
+from tokenizers_4573.normalizers import BertNormalizer
+from tokenizers_4573.pre_tokenizers import BertPreTokenizer
+from tokenizers_4573.processors import BertProcessing
 
 from .base_tokenizer import BaseTokenizer
 

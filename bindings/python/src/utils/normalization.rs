@@ -12,7 +12,7 @@ use tk::pattern::Pattern;
 pub enum PyPattern {
     #[pyo3(annotation = "str")]
     Str(String),
-    #[pyo3(annotation = "tokenizers.Regex")]
+    #[pyo3(annotation = "tokenizers_4573.Regex")]
     Regex(Py<PyRegex>),
     // TODO: Add the compatibility for Fn(char) -> bool
 }
@@ -194,7 +194,7 @@ fn slice(
 /// Args:
 ///     sequence: str:
 ///         The string sequence used to initialize this NormalizedString
-#[pyclass(module = "tokenizers", name = "NormalizedString")]
+#[pyclass(module = "tokenizers_4573", name = "NormalizedString")]
 #[derive(Clone)]
 pub struct PyNormalizedString {
     pub(crate) normalized: NormalizedString,
@@ -386,7 +386,7 @@ impl From<PyNormalizedString> for NormalizedString {
     }
 }
 
-#[pyclass(module = "tokenizers", name = "NormalizedStringRefMut")]
+#[pyclass(module = "tokenizers_4573", name = "NormalizedStringRefMut")]
 #[derive(Clone)]
 pub struct PyNormalizedStringRefMut {
     inner: RefMutContainer<NormalizedString>,

@@ -2,7 +2,7 @@ import pickle
 
 import pytest
 
-from tokenizers.models import BPE, Model, WordLevel, WordPiece
+from tokenizers_4573.models import BPE, Model, WordLevel, WordPiece
 from ..utils import bert_files, data_dir, roberta_files
 
 

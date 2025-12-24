@@ -1,6 +1,6 @@
 import pytest
 
-from tokenizers import SentencePieceBPETokenizer, SentencePieceUnigramTokenizer
+from tokenizers_4573 import SentencePieceBPETokenizer, SentencePieceUnigramTokenizer
 
 
 class TestSentencePieceBPE:

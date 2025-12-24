@@ -12,7 +12,7 @@ class TestTrainFromIterators:
     @staticmethod
     def get_tokenizer_trainer():
         # START init_tokenizer_trainer
-        from tokenizers import Tokenizer, decoders, models, normalizers, pre_tokenizers, trainers
+        from tokenizers_4573 import Tokenizer, decoders, models, normalizers, pre_tokenizers, trainers
 
         tokenizer = Tokenizer(models.Unigram())
         tokenizer.normalizer = normalizers.NFKC()

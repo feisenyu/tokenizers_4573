@@ -1,4 +1,4 @@
-from tokenizers import Tokenizer
+from tokenizers_4573 import Tokenizer
 from ..utils import data_dir, doc_wiki_tokenizer
 
 
@@ -28,18 +28,18 @@ class TestQuicktour:
     @staticmethod
     def get_tokenizer_trainer():
         # START init_tokenizer
-        from tokenizers import Tokenizer
-        from tokenizers.models import BPE
+        from tokenizers_4573 import Tokenizer
+        from tokenizers_4573.models import BPE
 
         tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
         # END init_tokenizer
         # START init_trainer
-        from tokenizers.trainers import BpeTrainer
+        from tokenizers_4573.trainers import BpeTrainer
 
         trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
         # END init_trainer
         # START init_pretok
-        from tokenizers.pre_tokenizers import Whitespace
+        from tokenizers_4573.pre_tokenizers import Whitespace
 
         tokenizer.pre_tokenizer = Whitespace()
         # END init_pretok
@@ -97,7 +97,7 @@ class TestQuicktour:
         # END check_sep
         assert tokenizer.token_to_id("[SEP]") == 2
         # START init_template_processing
-        from tokenizers.processors import TemplateProcessing
+        from tokenizers_4573.processors import TemplateProcessing
 
         tokenizer.post_processor = TemplateProcessing(
             single="[CLS] $A [SEP]",

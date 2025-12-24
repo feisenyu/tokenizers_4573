@@ -3,7 +3,7 @@
 // Many false positives with pyo3 it seems &str, and &PyAny get flagged
 #![allow(clippy::borrow_deref_ref)]
 
-extern crate tokenizers as tk;
+extern crate tokenizers_4573 as tk;
 
 use once_cell::sync::Lazy;
 use std::sync::Arc;
@@ -50,7 +50,7 @@ extern "C" fn child_after_fork() {
 
 /// Tokenizers Module
 #[pymodule]
-pub fn tokenizers(m: &Bound<'_, PyModule>) -> PyResult<()> {
+pub fn tokenizers_4573(m: &Bound<'_, PyModule>) -> PyResult<()> {
     let _ = env_logger::try_init_from_env("TOKENIZERS_LOG");
 
     // Register the fork callback

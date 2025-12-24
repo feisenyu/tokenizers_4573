@@ -15,7 +15,7 @@ use tk::tokenizer::{
     TruncationDirection, TruncationParams, TruncationStrategy,
 };
 use tk::utils::iter::ResultShunt;
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 use super::decoders::PyDecoder;
 use super::encoding::PyEncoding;
@@ -60,7 +60,7 @@ use std::collections::BTreeMap;
 ///     special (:obj:`bool`, defaults to :obj:`False` with :meth:`~tokenizers.Tokenizer.add_tokens` and :obj:`False` with :meth:`~tokenizers.Tokenizer.add_special_tokens`):
 ///         Defines whether this token should be skipped when decoding.
 ///
-#[pyclass(dict, module = "tokenizers", name = "AddedToken")]
+#[pyclass(dict, module = "tokenizers_4573", name = "AddedToken")]
 pub struct PyAddedToken {
     pub content: String,
     pub special: bool,
@@ -468,7 +468,7 @@ type Tokenizer = TokenizerImpl<PyModel, PyNormalizer, PyPreTokenizer, PyPostProc
 ///     model (:class:`~tokenizers.models.Model`):
 ///         The core algorithm that this :obj:`Tokenizer` should be using.
 ///
-#[pyclass(dict, module = "tokenizers", name = "Tokenizer")]
+#[pyclass(dict, module = "tokenizers_4573", name = "Tokenizer")]
 #[derive(Clone, Serialize)]
 #[serde(transparent)]
 pub struct PyTokenizer {

@@ -883,7 +883,7 @@ class Whitespace(PreTokenizer):
         Use the `Whitespace` function as shown below::
 
             ```python
-            from tokenizers.pre_tokenizers import Whitespace
+            from tokenizers_4573.pre_tokenizers import Whitespace
 
             pre_tokenizer = Whitespace()
             text = "Hello, world! Let's try the Whitespace pre-tokenizer."

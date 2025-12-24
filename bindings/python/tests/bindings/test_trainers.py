@@ -4,7 +4,7 @@ import pickle
 
 import pytest
 
-from tokenizers import (
+from tokenizers_4573 import (
     AddedToken,
     SentencePieceUnigramTokenizer,
     Tokenizer,

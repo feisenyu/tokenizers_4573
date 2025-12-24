@@ -1,7 +1,7 @@
 import argparse
 import glob
 
-from tokenizers import BertWordPieceTokenizer
+from tokenizers_4573 import BertWordPieceTokenizer
 
 
 parser = argparse.ArgumentParser()

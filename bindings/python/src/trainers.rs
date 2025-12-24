@@ -8,13 +8,13 @@ use pyo3::types::*;
 use serde::{Deserialize, Serialize};
 use tk::models::TrainerWrapper;
 use tk::Trainer;
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 /// Base class for all trainers
 ///
 /// This class is not supposed to be instantiated directly. Instead, any implementation of a
 /// Trainer will return an instance of this class when instantiated.
-#[pyclass(module = "tokenizers.trainers", name = "Trainer", subclass)]
+#[pyclass(module = "tokenizers_4573.trainers", name = "Trainer", subclass)]
 #[derive(Clone, Deserialize, Serialize)]
 #[serde(transparent)]
 pub struct PyTrainer {
@@ -175,7 +175,7 @@ macro_rules! setter {
 ///         This can help with reducing polluting your vocabulary with
 ///         highly repetitive tokens like `======` for wikipedia
 ///
-#[pyclass(extends=PyTrainer, module = "tokenizers.trainers", name = "BpeTrainer")]
+#[pyclass(extends=PyTrainer, module = "tokenizers_4573.trainers", name = "BpeTrainer")]
 pub struct PyBpeTrainer {}
 #[pymethods]
 impl PyBpeTrainer {
@@ -392,7 +392,7 @@ impl PyBpeTrainer {
 ///
 ///     end_of_word_suffix (:obj:`str`, `optional`):
 ///         A suffix to be used for every subword that is a end-of-word.
-#[pyclass(extends=PyTrainer, module = "tokenizers.trainers", name = "WordPieceTrainer")]
+#[pyclass(extends=PyTrainer, module = "tokenizers_4573.trainers", name = "WordPieceTrainer")]
 pub struct PyWordPieceTrainer {}
 #[pymethods]
 impl PyWordPieceTrainer {
@@ -584,7 +584,7 @@ impl PyWordPieceTrainer {
 ///
 ///     special_tokens (:obj:`List[Union[str, AddedToken]]`):
 ///         A list of special tokens the model should know of.
-#[pyclass(extends=PyTrainer, module = "tokenizers.trainers", name = "WordLevelTrainer")]
+#[pyclass(extends=PyTrainer, module = "tokenizers_4573.trainers", name = "WordLevelTrainer")]
 pub struct PyWordLevelTrainer {}
 #[pymethods]
 impl PyWordLevelTrainer {
@@ -743,7 +743,7 @@ impl PyWordLevelTrainer {
 ///     n_sub_iterations (:obj:`int`):
 ///         The number of iterations of the EM algorithm to perform before
 ///         pruning the vocabulary.
-#[pyclass(extends=PyTrainer, module = "tokenizers.trainers", name = "UnigramTrainer")]
+#[pyclass(extends=PyTrainer, module = "tokenizers_4573.trainers", name = "UnigramTrainer")]
 pub struct PyUnigramTrainer {}
 #[pymethods]
 impl PyUnigramTrainer {
@@ -877,7 +877,7 @@ impl PyUnigramTrainer {
             }
         }
 
-        let trainer: tokenizers::models::unigram::UnigramTrainer =
+        let trainer: tokenizers_4573::models::unigram::UnigramTrainer =
             builder.build().map_err(|e| {
                 exceptions::PyException::new_err(format!("Cannot build UnigramTrainer: {e}"))
             })?;

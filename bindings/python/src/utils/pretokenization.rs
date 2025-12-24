@@ -1,4 +1,4 @@
-use tokenizers as tk;
+use tokenizers_4573 as tk;
 
 use pyo3::exceptions;
 use pyo3::prelude::*;
@@ -147,7 +147,7 @@ fn to_encoding(
 /// Args:
 ///     sequence: str:
 ///         The string sequence used to initialize this PreTokenizedString
-#[pyclass(module = "tokenizers", name = "PreTokenizedString")]
+#[pyclass(module = "tokenizers_4573", name = "PreTokenizedString")]
 pub struct PyPreTokenizedString {
     pub(crate) pretok: tk::PreTokenizedString,
 }
@@ -259,7 +259,7 @@ impl PyPreTokenizedString {
     }
 }
 
-#[pyclass(module = "tokenizers", name = "PreTokenizedString")]
+#[pyclass(module = "tokenizers_4573", name = "PreTokenizedString")]
 #[derive(Clone)]
 pub struct PyPreTokenizedStringRefMut {
     inner: RefMutContainer<PreTokenizedString>,

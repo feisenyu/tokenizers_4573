@@ -3,7 +3,7 @@ import pickle
 
 import pytest
 
-from tokenizers.pre_tokenizers import (
+from tokenizers_4573.pre_tokenizers import (
     BertPreTokenizer,
     ByteLevel,
     CharDelimiterSplit,

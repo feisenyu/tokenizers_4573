@@ -2,8 +2,8 @@ import pickle
 
 import pytest
 
-from tokenizers import NormalizedString
-from tokenizers.normalizers import (
+from tokenizers_4573 import NormalizedString
+from tokenizers_4573.normalizers import (
     BertNormalizer,
     Lowercase,
     Normalizer,

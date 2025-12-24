@@ -3,7 +3,7 @@ import pickle
 
 import pytest
 
-from tokenizers.decoders import (
+from tokenizers_4573.decoders import (
     CTC,
     BPEDecoder,
     ByteLevel,

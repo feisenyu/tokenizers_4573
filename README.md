@@ -58,8 +58,8 @@ pip install tokenizers
 Choose your model between Byte-Pair Encoding, WordPiece or Unigram and instantiate a tokenizer:
 
 ```python
-from tokenizers import Tokenizer
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer
+from tokenizers_4573.models import BPE
 
 tokenizer = Tokenizer(BPE())
 ```
@@ -67,7 +67,7 @@ tokenizer = Tokenizer(BPE())
 You can customize how pre-tokenization (e.g., splitting into words) is done:
 
 ```python
-from tokenizers.pre_tokenizers import Whitespace
+from tokenizers_4573.pre_tokenizers import Whitespace
 
 tokenizer.pre_tokenizer = Whitespace()
 ```
@@ -75,7 +75,7 @@ tokenizer.pre_tokenizer = Whitespace()
 Then training your tokenizer on a set of files just takes two lines of codes:
 
 ```python
-from tokenizers.trainers import BpeTrainer
+from tokenizers_4573.trainers import BpeTrainer
 
 trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
 tokenizer.train(files=["wiki.train.raw", "wiki.valid.raw", "wiki.test.raw"], trainer=trainer)

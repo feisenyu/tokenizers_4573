@@ -4,7 +4,7 @@ import re
 from string import Template
 from typing import Any, Callable, Dict, List, NamedTuple, Optional, Tuple
 
-from tokenizers import Encoding, Tokenizer
+from tokenizers_4573 import Encoding, Tokenizer
 
 
 dirname = os.path.dirname(__file__)

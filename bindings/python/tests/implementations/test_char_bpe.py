@@ -1,4 +1,4 @@
-from tokenizers import CharBPETokenizer
+from tokenizers_4573 import CharBPETokenizer
 
 from ..utils import data_dir, multiprocessing_with_parallelism, openai_files
 

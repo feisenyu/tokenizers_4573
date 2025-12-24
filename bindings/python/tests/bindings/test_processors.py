@@ -3,10 +3,10 @@ import pickle
 
 import pytest
 
-from tokenizers import Tokenizer
-from tokenizers.models import BPE
-from tokenizers.pre_tokenizers import ByteLevel as ByteLevelPreTokenizer
-from tokenizers.processors import (
+from tokenizers_4573 import Tokenizer
+from tokenizers_4573.models import BPE
+from tokenizers_4573.pre_tokenizers import ByteLevel as ByteLevelPreTokenizer
+from tokenizers_4573.processors import (
     BertProcessing,
     ByteLevel,
     PostProcessor,
